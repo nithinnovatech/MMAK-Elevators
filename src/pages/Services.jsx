@@ -153,8 +153,8 @@ const Services = () => {
                         transition={{ duration: 0.6 }}
                         className="text-center max-w-4xl mx-auto"
                     >
-                        <h1 className="text-5xl md:text-6xl font-bold mb-6">Our Services</h1>
-                        <p className="text-xl text-blue-100">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">Our Services</h1>
+                        <p className="text-lg md:text-xl text-blue-100">
                             Comprehensive elevator and escalator solutions for all your vertical transportation needs
                         </p>
                     </motion.div>
@@ -179,10 +179,10 @@ const Services = () => {
                                     <div className="icon-container mb-6">
                                         {service.icon}
                                     </div>
-                                    <h2 className="text-4xl font-bold mb-4">
+                                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
                                         {service.title}
                                     </h2>
-                                    <p className="text-lg text-gray-700 mb-6">
+                                    <p className="text-base md:text-lg text-gray-700 mb-4 md:mb-6">
                                         {service.description}
                                     </p>
                                     <ul className="space-y-3 mb-8">
@@ -238,8 +238,8 @@ const Services = () => {
                         viewport={{ once: true }}
                         className="card-glass p-12 text-center"
                     >
-                        <h2 className="text-4xl font-bold mb-4">Need Our Services?</h2>
-                        <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+                        <h2 className="text-3xl md:text-4xl font-bold mb-4">Need Our Services?</h2>
+                        <p className="text-base md:text-lg text-gray-700 mb-6 md:mb-8 max-w-2xl mx-auto">
                             Contact us today to discuss your elevator and escalator needs. Our expert team is ready to provide you with the best solutions.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">

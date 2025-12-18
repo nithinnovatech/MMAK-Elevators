@@ -30,13 +30,13 @@ const Contact = () => {
             address: '#26-15-215/1, G-2, M.M Galaxy, 3rd street, Vanamthopu, Nellore-524004',
             phone: '+91-8341735557',
             altPhone: '+91-9976055557',
-            email: 'mmakelevators.india@gmail.com',
+            email: 'info@mmakelevators.com',
         },
         {
             name: 'Vizag Branch',
             address: '#49-26-59, ff-3, Vishnu Residency, Madhuranagar, Visakhapatnam-530016',
             phone: '+91-9976055557',
-            email: 'mmakelevators.india@gmail.com',
+            email: 'info@mmakelevators.com',
         },
     ];
 
@@ -51,8 +51,8 @@ const Contact = () => {
                         transition={{ duration: 0.6 }}
                         className="text-center max-w-4xl mx-auto"
                     >
-                        <h1 className="text-5xl md:text-6xl font-bold mb-6">Contact Us</h1>
-                        <p className="text-xl text-blue-100">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">Contact Us</h1>
+                        <p className="text-lg md:text-xl text-blue-100">
                             Get in touch with our team for expert elevator and escalator services
                         </p>
                     </motion.div>
@@ -70,7 +70,7 @@ const Contact = () => {
                             transition={{ duration: 0.6 }}
                             viewport={{ once: true }}
                         >
-                            <h2 className="text-3xl font-bold mb-6">Send Us a Message</h2>
+                            <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Send Us a Message</h2>
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div>
                                     <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
@@ -165,7 +165,7 @@ const Contact = () => {
                             transition={{ duration: 0.6 }}
                             viewport={{ once: true }}
                         >
-                            <h2 className="text-3xl font-bold mb-6">Quick Contact</h2>
+                            <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Quick Contact</h2>
 
                             <div className="space-y-6 mb-8">
                                 <div className="flex items-start space-x-4">
@@ -175,7 +175,7 @@ const Contact = () => {
                                         </svg>
                                     </div>
                                     <div>
-                                        <h3 className="font-semibold text-lg mb-2">Call Us</h3>
+                                        <h3 className="font-semibold text-base md:text-lg mb-2">Call Us</h3>
                                         <a href="tel:+918341735557" className="text-blue-600 hover:text-blue-700 block">
                                             +91-8341735557
                                         </a>
@@ -192,9 +192,9 @@ const Contact = () => {
                                         </svg>
                                     </div>
                                     <div>
-                                        <h3 className="font-semibold text-lg mb-2">Email Us</h3>
-                                        <a href="mailto:mmakelevators.india@gmail.com" className="text-blue-600 hover:text-blue-700 break-all">
-                                            mmakelevators.india@gmail.com
+                                        <h3 className="font-semibold text-base md:text-lg mb-2">Email Us</h3>
+                                        <a href="mailto:info@mmakelevators.com" className="text-blue-600 hover:text-blue-700 break-all">
+                                            info@mmakelevators.com
                                         </a>
                                     </div>
                                 </div>
@@ -206,7 +206,7 @@ const Contact = () => {
                                         </svg>
                                     </div>
                                     <div>
-                                        <h3 className="font-semibold text-lg mb-2">Business Hours</h3>
+                                        <h3 className="font-semibold text-base md:text-lg mb-2">Business Hours</h3>
                                         <p className="text-gray-700">Monday - Saturday: 9:00 AM - 6:00 PM</p>
                                         <p className="text-gray-700">Sunday: 9:00 AM - 12:00 PM</p>
                                     </div>
@@ -214,7 +214,7 @@ const Contact = () => {
                             </div>
 
                             <div className="card-glass p-6">
-                                <h3 className="font-bold text-xl mb-4">Why Choose MMAK?</h3>
+                                <h3 className="font-bold text-lg md:text-xl mb-4">Why Choose MMAK?</h3>
                                 <ul className="space-y-2 text-gray-700">
                                     <li className="flex items-center">
                                         <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -273,7 +273,7 @@ const Contact = () => {
                                         </svg>
                                     </div>
                                     <div>
-                                        <h3 className="text-2xl font-bold mb-2">{branch.name}</h3>
+                                        <h3 className="text-xl md:text-2xl font-bold mb-2">{branch.name}</h3>
                                         <p className="text-gray-700 mb-4">{branch.address}</p>
                                         <div className="space-y-2">
                                             <a href={`tel:${branch.phone}`} className="flex items-center text-blue-600 hover:text-blue-700">

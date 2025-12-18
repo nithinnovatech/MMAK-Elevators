@@ -49,7 +49,7 @@ const HeroSlider = () => {
     };
 
     return (
-        <div className="relative h-screen w-full overflow-hidden">
+        <div className="relative h-[70vh] md:h-screen w-full overflow-hidden">
             <AnimatePresence mode="wait">
                 <motion.div
                     key={currentSlide}
@@ -67,7 +67,7 @@ const HeroSlider = () => {
                         }}
                     >
                         {/* Overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-blue-800/80 to-blue-900/70" />
+                        <div className="absolute inset-0 bg-black/40" />
                     </div>
 
                     {/* Content */}
@@ -85,11 +85,11 @@ const HeroSlider = () => {
                                         </span>
                                     </div>
 
-                                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight">
                                         {slides[currentSlide].title}
                                     </h1>
 
-                                    <p className="text-xl md:text-2xl text-gray-200 mb-8">
+                                    <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-6 md:mb-8">
                                         {slides[currentSlide].description}
                                     </p>
 
@@ -111,7 +111,7 @@ const HeroSlider = () => {
             {/* Navigation Arrows */}
             <button
                 onClick={prevSlide}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 group z-10"
+                className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white/20 backdrop-blur-sm hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 group z-10"
                 aria-label="Previous slide"
             >
                 <svg
@@ -131,7 +131,7 @@ const HeroSlider = () => {
 
             <button
                 onClick={nextSlide}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 group z-10"
+                className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white/20 backdrop-blur-sm hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 group z-10"
                 aria-label="Next slide"
             >
                 <svg
@@ -156,8 +156,8 @@ const HeroSlider = () => {
                         key={index}
                         onClick={() => goToSlide(index)}
                         className={`transition-all duration-300 ${currentSlide === index
-                                ? 'w-12 h-3 bg-white rounded-full'
-                                : 'w-3 h-3 bg-white/50 hover:bg-white/75 rounded-full'
+                            ? 'w-12 h-3 bg-white rounded-full'
+                            : 'w-3 h-3 bg-white/50 hover:bg-white/75 rounded-full'
                             }`}
                         aria-label={`Go to slide ${index + 1}`}
                     />

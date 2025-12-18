@@ -39,8 +39,8 @@ const About = () => {
                         transition={{ duration: 0.6 }}
                         className="text-center max-w-4xl mx-auto"
                     >
-                        <h1 className="text-5xl md:text-6xl font-bold mb-6">About MMAK Elevators</h1>
-                        <p className="text-xl text-blue-100">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">About MMAK Elevators</h1>
+                        <p className="text-lg md:text-xl text-blue-100">
                             Premier provider of elevator services specializing in repairs, maintenance, spare parts, and new installations
                         </p>
                     </motion.div>
@@ -57,16 +57,16 @@ const About = () => {
                             transition={{ duration: 0.6 }}
                             viewport={{ once: true }}
                         >
-                            <h2 className="text-4xl font-bold mb-6">
+                            <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6">
                                 Welcome to <span className="gradient-text">MMAK Elevators & Escalators</span>
                             </h2>
-                            <p className="text-lg text-gray-700 mb-4">
+                            <p className="text-base md:text-lg text-gray-700 mb-4">
                                 We are excited to introduce MMAK Elevators and Escalators, a premier provider of elevator services specializing in repairs, maintenance, spare parts, and new installations.
                             </p>
-                            <p className="text-lg text-gray-700 mb-4">
+                            <p className="text-base md:text-lg text-gray-700 mb-4">
                                 With over 25 years of combined experience, our team of engineers and technicians includes former employees of industry leaders KONE and OTIS, bringing invaluable expertise from both India and the Middle East.
                             </p>
-                            <p className="text-lg text-gray-700">
+                            <p className="text-base md:text-lg text-gray-700">
                                 We understand the critical importance of reliable elevator systems in ensuring the smooth operation of your facilities.
                             </p>
                         </motion.div>
@@ -107,7 +107,7 @@ const About = () => {
                                 viewport={{ once: true }}
                                 className="text-center"
                             >
-                                <div className="text-5xl md:text-6xl font-bold gradient-text mb-2">
+                                <div className="text-4xl md:text-5xl lg:text-6xl font-bold gradient-text mb-2">
                                     {stat.number}
                                 </div>
                                 <div className="text-gray-700 font-semibold">
@@ -159,11 +159,11 @@ const About = () => {
                             transition={{ duration: 0.6 }}
                             viewport={{ once: true }}
                         >
-                            <h2 className="text-4xl font-bold mb-6">Our Commitment</h2>
-                            <p className="text-lg text-gray-700 mb-6">
+                            <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6">Our Commitment</h2>
+                            <p className="text-base md:text-lg text-gray-700 mb-4 md:mb-6">
                                 At MMAK, we pride ourselves on our commitment to customer satisfaction, technical expertise, and competitive pricing. We understand that reliable elevator systems are critical to your operations, and we're dedicated to ensuring your systems perform at their best.
                             </p>
-                            <p className="text-lg text-gray-700 mb-8">
+                            <p className="text-base md:text-lg text-gray-700 mb-6 md:mb-8">
                                 We would welcome the opportunity to discuss how our team can support your elevator needs and enhance the performance of your systems.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
