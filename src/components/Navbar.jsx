@@ -42,8 +42,8 @@ const Navbar = () => {
               className="h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
             />
             <div className="flex flex-col justify-center">
-              <span className="font-bold text-xs md:text-lg tracking-wider text-gray-800 uppercase leading-tight">Elevators &</span>
-              <span className="font-bold text-xs md:text-lg tracking-wider text-gray-800 uppercase leading-tight">Escalators</span>
+              {/* <span className="font-bold text-xs md:text-lg tracking-wider text-gray-800 uppercase leading-tight">Elevators &</span>
+              <span className="font-bold text-xs md:text-lg tracking-wider text-gray-800 uppercase leading-tight">Escalators</span> */}
             </div>
           </Link>
 

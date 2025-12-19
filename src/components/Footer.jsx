@@ -31,8 +31,8 @@ const Footer = () => {
                                 className="h-16 w-auto object-contain bg-white/10 p-1 rounded-lg backdrop-blur-sm group-hover:bg-white/20 transition-all duration-300"
                             />
                             <div className="flex flex-col items-center md:items-start">
-                                <span className="font-bold text-xl tracking-wide text-blue-400"></span>
-                                <span className="font-semibold text-sm tracking-widest text-gray-300 uppercase">Elevators & Escalators</span>
+                                {/* <span className="font-bold text-xl tracking-wide text-blue-400"></span>
+                                <span className="font-semibold text-sm tracking-widest text-gray-300 uppercase">Elevators & Escalators</span> */}
                             </div>
                         </Link>
                         <p className="text-gray-400 text-sm md:text-base mb-4 text-center md:text-left">
