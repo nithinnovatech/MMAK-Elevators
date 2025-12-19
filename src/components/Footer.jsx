@@ -24,17 +24,21 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
                     {/* Company Info */}
                     <div>
-                        <Link to="/" className="flex items-center space-x-3 mb-4">
+                        <Link to="/" className="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-3 mb-4 group">
                             <img
                                 src="/images/mmak-logo.png"
                                 alt="MMAK Elevators Logo"
-                                className="h-12 w-auto object-contain"
+                                className="h-16 w-auto object-contain bg-white/10 p-1 rounded-lg backdrop-blur-sm group-hover:bg-white/20 transition-all duration-300"
                             />
+                            <div className="flex flex-col items-center md:items-start">
+                                <span className="font-bold text-xl tracking-wide text-blue-400"></span>
+                                <span className="font-semibold text-sm tracking-widest text-gray-300 uppercase">Elevators & Escalators</span>
+                            </div>
                         </Link>
-                        <p className="text-gray-400 text-sm md:text-base mb-4">
+                        <p className="text-gray-400 text-sm md:text-base mb-4 text-center md:text-left">
                             Premier provider of elevator services with over 25 years of combined experience.
                         </p>
-                        <div className="flex space-x-4">
+                        <div className="flex justify-center md:justify-start space-x-4">
                             <a
                                 href="mailto:info@mmakelevators.com"
                                 className="w-10 h-10 bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors duration-300"
@@ -59,7 +63,7 @@ const Footer = () => {
 
                     {/* Quick Links */}
                     <div>
-                        <h4 className="font-bold text-base md:text-lg mb-3 md:mb-4 font-display">Quick Links</h4>
+                        <h4 className="font-bold text-base md:text-lg mb-3 md:mb-4 font-display text-blue-400 border-b-2 border-blue-400/30 inline-block pb-1">Quick Links</h4>
                         <ul className="space-y-2">
                             {quickLinks.map((link) => (
                                 <li key={link.path}>
@@ -76,7 +80,7 @@ const Footer = () => {
 
                     {/* Services */}
                     <div>
-                        <h4 className="font-bold text-base md:text-lg mb-3 md:mb-4 font-display">Our Services</h4>
+                        <h4 className="font-bold text-base md:text-lg mb-3 md:mb-4 font-display text-blue-400 border-b-2 border-blue-400/30 inline-block pb-1">Our Services</h4>
                         <ul className="space-y-2">
                             {services.map((service) => (
                                 <li key={service} className="text-gray-400 text-sm">
@@ -88,7 +92,7 @@ const Footer = () => {
 
                     {/* Contact Info */}
                     <div>
-                        <h4 className="font-bold text-base md:text-lg mb-3 md:mb-4 font-display">Contact Us</h4>
+                        <h4 className="font-bold text-base md:text-lg mb-3 md:mb-4 font-display text-blue-400 border-b-2 border-blue-400/30 inline-block pb-1">Contact Us</h4>
 
                         {/* Nellore Branch */}
                         <div className="mb-4">
@@ -131,7 +135,7 @@ const Footer = () => {
                 {/* Business Hours */}
                 <div className="border-t border-gray-700 pt-6 mb-6">
                     <div className="text-center">
-                        <h4 className="font-bold text-base md:text-lg mb-3 font-display">Business Hours</h4>
+                        <h4 className="font-bold text-base md:text-lg mb-3 font-display text-blue-400 inline-block border-b-2 border-blue-400/30 pb-1">Business Hours</h4>
                         <div className="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-8 text-gray-400 text-sm">
                             <div className="flex items-center space-x-2">
                                 <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">

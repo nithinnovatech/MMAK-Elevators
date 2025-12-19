@@ -8,6 +8,7 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import WhatsAppButton from './components/WhatsAppButton';
 import ScrollToTop from './components/ScrollToTop';
+import ScrollToTopOnNav from './components/ScrollToTopOnNav';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Footer />
       <WhatsAppButton />
       <ScrollToTop />
+      <ScrollToTopOnNav />
     </div>
   );
 }

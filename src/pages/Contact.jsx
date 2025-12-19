@@ -19,8 +19,15 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Form submission logic here
-        alert('Thank you for contacting us! We will get back to you soon.');
+        const { name, email, phone, subject, message } = formData;
+
+        const mailSubject = encodeURIComponent(subject || 'New Contact Request');
+        const mailBody = encodeURIComponent(
+            `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`
+        );
+
+        window.location.href = `mailto:info@mmakelevators.com?subject=${mailSubject}&body=${mailBody}`;
+
         setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
     };
 

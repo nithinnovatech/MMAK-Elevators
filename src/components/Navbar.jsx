@@ -20,7 +20,7 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Contact', path: 'mailto:info@mmakelevators.com' },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -28,43 +28,53 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? 'bg-white shadow-lg py-3'
-          : 'bg-white/95 backdrop-blur-sm py-4'
+        ? 'bg-white shadow-lg py-3'
+        : 'bg-white/95 backdrop-blur-sm py-4'
         }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center group">
+          <Link to="/" className="flex items-center space-x-3 group">
             <img
               src="/images/mmak-logo.png"
               alt="MMAK Elevators Logo"
-              className="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+              className="h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
             />
+            <div className="flex flex-col justify-center">
+              <span className="font-bold text-xs md:text-lg tracking-wider text-gray-800 uppercase leading-tight">Elevators &</span>
+              <span className="font-bold text-xs md:text-lg tracking-wider text-gray-800 uppercase leading-tight">Escalators</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`relative font-semibold transition-colors duration-300 ${isActive(link.path)
+            {navLinks.map((link) => {
+              const isExternal = link.path.startsWith('mailto:') || link.path.startsWith('http');
+              const Component = isExternal ? 'a' : Link;
+              const props = isExternal ? { href: link.path } : { to: link.path };
+
+              return (
+                <Component
+                  key={link.path}
+                  {...props}
+                  className={`relative font-semibold transition-colors duration-300 ${isActive(link.path)
                     ? 'text-blue-600'
                     : 'text-gray-700 hover:text-blue-600'
-                  }`}
-              >
-                {link.name}
-                {isActive(link.path) && (
-                  <motion.div
-                    layoutId="navbar-indicator"
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-blue-600"
-                    initial={false}
-                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                  />
-                )}
-              </Link>
-            ))}
+                    }`}
+                >
+                  {link.name}
+                  {!isExternal && isActive(link.path) && (
+                    <motion.div
+                      layoutId="navbar-indicator"
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-blue-600"
+                      initial={false}
+                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                    />
+                  )}
+                </Component>
+              );
+            })}
           </div>
 
           {/* Contact Button */}
@@ -132,19 +142,35 @@ const Navbar = () => {
               className="md:hidden overflow-hidden"
             >
               <div className="py-4 space-y-3">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.path}
-                    to={link.path}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className={`block px-4 py-2 rounded-lg font-semibold transition-colors duration-300 ${isActive(link.path)
+                <div className="flex flex-col items-center mb-6 px-4 text-center">
+                  <img
+                    src="/images/mmak-logo.png"
+                    alt="MMAK Elevators Logo"
+                    className="h-16 w-auto object-contain mb-3"
+                  />
+                  <span className="font-bold text-gray-900 text-lg leading-tight uppercase">
+                    Elevators & Escalators
+                  </span>
+                </div>
+                {navLinks.map((link) => {
+                  const isExternal = link.path.startsWith('mailto:') || link.path.startsWith('http');
+                  const Component = isExternal ? 'a' : Link;
+                  const props = isExternal ? { href: link.path } : { to: link.path };
+
+                  return (
+                    <Component
+                      key={link.path}
+                      {...props}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={`block px-4 py-2 rounded-lg font-semibold transition-colors duration-300 ${isActive(link.path)
                         ? 'bg-blue-50 text-blue-600'
                         : 'text-gray-700 hover:bg-gray-50'
-                      }`}
-                  >
-                    {link.name}
-                  </Link>
-                ))}
+                        }`}
+                    >
+                      {link.name}
+                    </Component>
+                  );
+                })}
                 <a
                   href="tel:+918341735557"
                   className="block btn btn-primary w-full text-center"
