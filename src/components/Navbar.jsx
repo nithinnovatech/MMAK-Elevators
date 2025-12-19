@@ -142,16 +142,6 @@ const Navbar = () => {
               className="md:hidden overflow-hidden"
             >
               <div className="py-4 space-y-3">
-                <div className="flex flex-col items-center mb-6 px-4 text-center">
-                  <img
-                    src="/images/mmak-logo.png"
-                    alt="MMAK Elevators Logo"
-                    className="h-16 w-auto object-contain mb-3"
-                  />
-                  <span className="font-bold text-gray-900 text-lg leading-tight uppercase">
-                    Elevators & Escalators
-                  </span>
-                </div>
                 {navLinks.map((link) => {
                   const isExternal = link.path.startsWith('mailto:') || link.path.startsWith('http');
                   const Component = isExternal ? 'a' : Link;
