@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const Services = () => {
@@ -18,7 +19,7 @@ const Services = () => {
                 'Safety compliance certified',
                 'Custom cabin designs',
             ],
-            image: '/images/passengers-lift.jpg',
+            image: '/images/passenger-elevator.png',
         },
         {
             title: 'Goods Lifts',
@@ -35,7 +36,7 @@ const Services = () => {
                 'Customizable dimensions',
                 'Safety interlocks',
             ],
-            image: '/images/goods-lift.jpg',
+            image: '/images/goods-lift.png',
         },
         {
             title: 'Hydraulic Lifts',
@@ -52,7 +53,7 @@ const Services = () => {
                 'Ideal for low to mid-rise buildings',
                 'Reliable performance',
             ],
-            image: '/images/hydraulic-lift.jpg',
+            image: '/images/hydraulic-lift.png',
         },
         {
             title: 'Hospital Lifts',
@@ -69,7 +70,7 @@ const Services = () => {
                 'Emergency power backup',
                 'Quick response time',
             ],
-            image: '/images/hospital-lift.jpg',
+            image: '/images/hospital-elevator.png',
         },
         {
             title: 'Scissor Lifts',
@@ -86,7 +87,7 @@ const Services = () => {
                 'Easy to operate',
                 'Indoor and outdoor use',
             ],
-            image: '/images/scissor-lift.jpg',
+            image: '/images/scissor-lift.png',
         },
         {
             title: 'Dumbwaiter Lifts',
@@ -103,7 +104,7 @@ const Services = () => {
                 'Hygienic construction',
                 'Reliable service',
             ],
-            image: '/images/dumbwaiter-lift.jpg',
+            image: '/images/dumbwaiter-lift.png',
         },
         {
             title: 'Maintenance, Modernization & Upgrading',
@@ -121,7 +122,7 @@ const Services = () => {
                 'Performance optimization',
                 'Extended equipment life',
             ],
-            image: '/images/service-maintenance.jpg',
+            image: '/images/elevator-maintenance.png',
         },
         {
             title: 'Supply of Spare Parts',
@@ -138,7 +139,7 @@ const Services = () => {
                 'Competitive pricing',
                 'Quality guaranteed',
             ],
-            image: '/images/service-parts.jpg',
+            image: '/images/elevator-spare-parts.png',
         },
     ];
 
@@ -205,9 +206,9 @@ const Services = () => {
                                             </li>
                                         ))}
                                     </ul>
-                                    <a href="/contact" className="btn btn-primary">
+                                    <Link to="/contact" className="btn btn-primary">
                                         Request This Service
-                                    </a>
+                                    </Link>
                                 </div>
 
                                 <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
@@ -243,9 +244,9 @@ const Services = () => {
                             Contact us today to discuss your elevator and escalator needs. Our expert team is ready to provide you with the best solutions.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="/contact" className="btn btn-primary btn-lg">
+                            <Link to="/contact" className="btn btn-primary btn-lg">
                                 Get in Touch
-                            </a>
+                            </Link>
                             <a href="tel:+918341735557" className="btn btn-secondary btn-lg">
                                 Call: +91-8341735557
                             </a>

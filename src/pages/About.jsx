@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const About = () => {
@@ -167,12 +168,12 @@ const About = () => {
                                 We would welcome the opportunity to discuss how our team can support your elevator needs and enhance the performance of your systems.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <a href="/contact" className="btn btn-primary btn-lg">
+                                <Link to="/contact" className="btn btn-primary btn-lg">
                                     Contact Us Today
-                                </a>
-                                <a href="/services" className="btn btn-secondary btn-lg">
+                                </Link>
+                                <Link to="/services" className="btn btn-secondary btn-lg">
                                     View Our Services
-                                </a>
+                                </Link>
                             </div>
                         </motion.div>
                     </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import HeroSlider from '../components/HeroSlider';
 import { motion } from 'framer-motion';
 
@@ -117,12 +118,12 @@ const Home = () => {
                                     <h3>{service.title}</h3>
                                     <p>{service.description}</p>
                                     <div className="flex flex-col gap-2 mt-4">
-                                        <a href="/services" className="text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center justify-center">
+                                        <Link to="/services" className="text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center justify-center">
                                             Learn More
                                             <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                             </svg>
-                                        </a>
+                                        </Link>
                                         <a
                                             href={whatsappUrl}
                                             target="_blank"
@@ -185,9 +186,9 @@ const Home = () => {
                                 </li>
                             </ul>
                             <div className="mt-8">
-                                <a href="/about" className="btn btn-primary">
+                                <Link to="/about" className="btn btn-primary">
                                     Learn More About Us
-                                </a>
+                                </Link>
                             </div>
                         </motion.div>
 
@@ -232,9 +233,9 @@ const Home = () => {
                             Contact us today for expert elevator and escalator services. Our team is ready to assist you with all your vertical transportation needs.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="/contact" className="btn btn-accent btn-lg">
+                            <Link to="/contact" className="btn btn-accent btn-lg">
                                 Contact Us Now
-                            </a>
+                            </Link>
                             <a href="tel:+918341735557" className="btn btn-lg bg-white text-blue-600 hover:bg-gray-100">
                                 Call: +91-8341735557
                             </a>
