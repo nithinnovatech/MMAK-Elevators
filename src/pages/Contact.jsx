@@ -311,6 +311,38 @@ const Contact = () => {
                     </div>
                 </div>
             </section>
+            {/* Service Locations Section */}
+            <section className="section bg-white border-t border-gray-100">
+                <div className="container text-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}
+                    >
+                        <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6">
+                            Our Company’s Services Available in These Locations
+                        </h2>
+                        <div className="flex flex-wrap justify-center gap-3 md:gap-4 max-w-5xl mx-auto">
+                            {[
+                                'Vizag', 'Vizianagaram', 'Srikakulam', 'Rajahmundry', 'Kakinada',
+                                'Eluru', 'Vijayawada', 'Amaravati', 'Mangalagiri', 'Guntur',
+                                'Ongole', 'Nellore', 'Tirupati'
+                            ].map((location, index) => (
+                                <span
+                                    key={index}
+                                    className="px-4 py-2 bg-gray-50 text-blue-600 rounded-full font-semibold shadow-sm border border-blue-100 hover:border-blue-300 hover:shadow-md transition-all duration-300"
+                                >
+                                    {location}
+                                </span>
+                            ))}
+                        </div>
+                        <p className="mt-8 text-gray-600 italic text-lg">
+                            Serving the entire Andhra Pradesh region with excellence.
+                        </p>
+                    </motion.div>
+                </div>
+            </section>
         </div>
     );
 };
