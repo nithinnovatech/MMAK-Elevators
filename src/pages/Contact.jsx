@@ -26,7 +26,7 @@ const Contact = () => {
             `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`
         );
 
-        window.location.href = `mailto:info@mmakelevators.com?subject=${mailSubject}&body=${mailBody}`;
+        window.location.href = `mailto:mmakelevators.india@gmail.com?subject=${mailSubject}&body=${mailBody}`;
 
         setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
     };
@@ -37,13 +37,13 @@ const Contact = () => {
             address: '#26-15-215/1, G-2, M.M Galaxy, 3rd street, Vanamthopu, Nellore-524004',
             phone: '+91-8341735557',
             altPhone: '+91-9976055557',
-            email: 'info@mmakelevators.com',
+            email: 'mmakelevators.india@gmail.com',
         },
         {
             name: 'Vizag Branch',
             address: '#49-26-59, ff-3, Vishnu Residency, Madhuranagar, Visakhapatnam-530016',
             phone: '+91-9976055557',
-            email: 'info@mmakelevators.com',
+            email: 'mmakelevators.india@gmail.com',
         },
     ];
 
@@ -200,8 +200,8 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h3 className="font-semibold text-base md:text-lg mb-2">Email Us</h3>
-                                        <a href="mailto:info@mmakelevators.com" className="text-blue-600 hover:text-blue-700 break-all">
-                                            info@mmakelevators.com
+                                        <a href="mailto:mmakelevators.india@gmail.com" className="text-blue-600 hover:text-blue-700 break-all">
+                                            mmakelevators.india@gmail.com
                                         </a>
                                     </div>
                                 </div>

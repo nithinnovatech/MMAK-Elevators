@@ -40,7 +40,7 @@ const Footer = () => {
                         </p>
                         <div className="flex justify-center md:justify-start space-x-4">
                             <a
-                                href="mailto:info@mmakelevators.com"
+                                href="mailto:mmakelevators.india@gmail.com"
                                 className="w-10 h-10 bg-gray-700 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors duration-300"
                                 aria-label="Email"
                             >
@@ -134,10 +134,10 @@ const Footer = () => {
                         {/* Email */}
                         <div>
                             <a
-                                href="mailto:info@mmakelevators.com"
+                                href="mailto:mmakelevators.india@gmail.com"
                                 className="text-gray-400 hover:text-blue-400 text-sm break-all"
                             >
-                                info@mmakelevators.com
+                                mmakelevators.india@gmail.com
                             </a>
                         </div>
                     </div>
