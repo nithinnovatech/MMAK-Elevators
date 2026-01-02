@@ -264,44 +264,19 @@ p {
 
   /* Gold Trust Emblem */
   .gold-trust-emblem {
-    @apply flex flex-col items-center justify-center relative p-1;
-    min-width: 70px;
-  }
-
-  .gold-trust-emblem::before {
-    content: '';
-    @apply absolute inset-0 rounded-full opacity-20;
-    background: radial-gradient(circle, var(--color-accent-400) 0%, transparent 70%);
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    @apply flex flex-col items-center justify-center p-1;
+    min-width: 80px;
   }
 
   .gold-number-text {
-    @apply text-2xl md:text-3xl font-black leading-none tracking-tighter italic;
-    background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b38728 50%, #fbf5b7 55%, #aa771c 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+    @apply text-2xl md:text-3xl font-extrabold leading-none tracking-normal;
+    color: #8B6914;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   }
 
   .gold-sub-text {
-    @apply text-[8px] md:text-[9px] font-bold uppercase tracking-widest leading-none mt-1;
-    background: linear-gradient(135deg, #bf953f 0%, #b38728 50%, #aa771c 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  @keyframes pulse {
-
-    0%,
-    100% {
-      opacity: 0.1;
-      transform: scale(1);
-    }
-
-    50% {
-      opacity: 0.3;
-      transform: scale(1.1);
-    }
+    @apply text-[8px] md:text-[10px] font-bold uppercase tracking-wide leading-tight mt-0.5 text-center;
+    color: #8B6914;
   }
 }
 

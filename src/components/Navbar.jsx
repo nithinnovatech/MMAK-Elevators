@@ -33,26 +33,21 @@ const Navbar = () => {
         }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between relative">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 md:space-x-4 group">
+          <Link to="/" className="flex items-center group">
             <img
               src="/images/mmak-logo.png"
               alt="MMAK Elevators Logo"
               className="h-12 md:h-16 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
             />
-
-            {/* 25 Years Trust Emblem */}
-            <div className="gold-trust-emblem">
-              <div className="gold-number-text">25</div>
-              <div className="gold-sub-text text-center">Years of<br />Excellence</div>
-            </div>
-
-            <div className="flex flex-col justify-center">
-              {/* <span className="font-bold text-xs md:text-lg tracking-wider text-gray-800 uppercase leading-tight">Elevators &</span>
-              <span className="font-bold text-xs md:text-lg tracking-wider text-gray-800 uppercase leading-tight">Escalators</span> */}
-            </div>
           </Link>
+
+          {/* 25 Years Trust Emblem - Right Side */}
+          <div className="gold-trust-emblem md:ml-4">
+            <div className="gold-number-text">25</div>
+            <div className="gold-sub-text">Years of<br />Excellence</div>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
